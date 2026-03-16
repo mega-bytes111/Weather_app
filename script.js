@@ -20,7 +20,7 @@ async function getData(city) {
 
 async function showWeather(){
 
-    const value = input.value;
+    const value = input.value.trim();
 
     if(value === ""){
         alert("Please enter city name");
