@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background: linear-gradient(135deg,#5f9cff,#6be0ff);
+}
+
+.container{
+background: rgba(255,255,255,0.15);
+backdrop-filter: blur(10px);
+padding:30px;
+border-radius:15px;
+width:350px;
+text-align:center;
+color:white;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+h1{
+margin-bottom:20px;
+}
+
+.search-box{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+input{
+flex:1;
+padding:10px;
+border:none;
+border-radius:8px;
+outline:none;
+}
+
+button{
+padding:10px 15px;
+border:none;
+border-radius:8px;
+background:#ffffff;
+color:#333;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+background:#f1f1f1;
+}
+
+.weather-info{
+margin-top:20px;
+}
+
+#city-name{
+font-size:22px;
+font-weight:bold;
+}
+
+#city-time{
+margin:5px 0;
+opacity:0.9;
+}
+
+#city-temp{
+font-size:35px;
+font-weight:bold;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌤 Weather App</h1>
+
+<div class="search-box">
+<input id="city-input" type="text" placeholder="Enter city name">
+<button id="search-button">Search</button>
+</div>
+
+<div class="weather-info">
+    <h3 id="city-name"></h3>
+    <h6 id="city-time"></h6>
+
+    <img id="weather-icon" />
+
+    <p id="city-temp"></p>
+    <p id="feels-like"></p>
+    <p id="humidity"></p>
+    <p id="wind"></p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
